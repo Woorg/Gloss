@@ -1,0 +1,946 @@
+// Normally mainpage styles
+
+
+body
+	background: #f2f2f2 url(../img/bg.jpg) repeat 
+	line-height: 1
+	min-width: 1150px
+
+%in
+	margin: auto
+	width: 1150px 
+%in2
+	margin: auto
+	padding: 0 34px
+	width: 1080px
+	background: #FFF
+	
+
+// topsale
+
+.topsale
+	background: #FFF
+	height: 133px
+	.in
+		@extend %in
+		height: 133px
+		text-align: center
+.topsale__text
+	position: relative
+	padding: 37px 0 35px
+	font-size: 40px
+	display: inline-block
+	color: #b53452
+	text-transform: uppercase
+	font-family: 'roboto_condensedbold',sans-serif
+	font-weight: normal
+	.topsale__persent
+		position: absolute
+		top: 19px 
+		left: 0
+		font-size: 92px
+		font-family: 'roboto_condensedbold',sans-serif
+		font-weight: normal
+		color: #520E3C  
+	.topsale__date,
+	.topsale__smalltext
+		margin: 0 0 0 144px	
+	.topsale__smalltext
+		margin-left: 157px
+		display: block
+		font-family: 'roboto_condensedregular',sans-serif
+		font-weight: normal 
+		font-style: normal
+		font-size: 19px
+		color: #520e3c 
+		text-transform: uppercase
+		line-height: 28px 
+
+
+// topline
+.toplinewrap
+	@include background-image(linear-gradient(left, #31143e 0%, #6a1042 73.34%, #b83552 100%))
+.topline
+	background: url(../img/nav.jpg) 50% 0 no-repeat 
+	.in
+		@extend %in
+		+clr
+		text-align: center
+	.topline__nav
+		padding: 0 0 0 20px
+		display: inline-block
+		li
+			margin: 0 12px 0 0
+			line-height: 52px
+			float: left
+		a
+			padding: 0 12px 0 0
+			color: #FFF 
+			text-decoration: none
+			&:hover
+				color: #DF7D69
+
+// header
+
+.header
+	.in
+		@extend %in2
+		padding-bottom: 8px
+		position: relative
+		z-index: 2
+	.header__top
+		padding: 0 0 20px
+		+clr
+	&__logo
+		margin: 21px 6px 0 0
+		width: 276px
+		height: 75px
+		background: url(../img/logo.jpg) 0 0 no-repeat 
+		+hide-text
+	&__slogan
+		padding: 40px 0 0 
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+	&__contacts
+		padding: 20px 0 0
+		.header__phone,
+		.header__email
+			padding-top: 5px 
+			padding-bottom: 5px
+			display: inline-block
+			color: #353232 
+			.link
+				line-height: 18px 
+				color: #4171a5
+				font-family: 'roboto_condensedlight',sans-serif
+				font-weight: normal 
+		.header__phone
+			position: relative
+			padding-right: 26px
+			text-align: right
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				border-right: 1px solid #9a9898
+				height: 100%
+			.text
+				padding-top: 15px 
+				font-size: 36px
+				span
+					font-size: 24px
+		.header__email
+			padding-left: 18px
+			.text
+				padding-top: 5px
+				font-size: 24px 
+				span
+					padding-top: 5px
+					display: block
+					font-size: 15px
+.header__nav
+	border: 1px solid #dadada
+	background: #f0f0f0 
+.header__nav__inner
+	border: 1px solid #f8f8f8
+	padding: 0 34px 0 12px
+	+clr
+	ul
+		+clr
+	li
+		position: relative
+		float: left
+	a
+		padding: 0 16px
+		display: block
+		height: 49px
+		line-height: 48px
+		color: #353232
+		text-decoration: none
+		&:hover
+			color: #DF7D69 
+			cursor: pointer
+	.active
+		background: #353232
+		a
+			color: #FFF
+	.active2
+		background-color: #D57566
+		border: 1 solid #F8F8F8
+		@include box-shadow(inset 0 0 9px rgba(0, 0, 0, 0.21))
+		a
+			padding: 0 15px
+			display: block
+			color: #FFF
+			&:hover
+				color: #FFF
+
+	.header__subnav
+		border-top: 0px solid transparent
+		position: absolute
+		top: 49px
+		left: -11px
+		display: none 
+		padding: 20px 0 18px 
+		width: 210px
+		background: url(../img/subnavbg.png) 0 0 repeat
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: 1px
+			background: #FFF  
+		li
+			padding: 0 0 12px
+		a
+			text-decoration: underline
+			line-height: 1
+			height: auto
+			color: #353232 
+			&:hover
+				text-decoration: none
+	li
+		&:hover
+			.header__subnav
+				display: block
+			
+.header__search
+	padding: 8px 0
+	font-family: 'roboto_condensedlight',sans-serif
+	font-weight: normal
+	.inputtext
+		border: 1px solid #dadada
+		padding: 0 10px
+		width: 259px
+		height: 31px
+		line-height: 31px
+		font-family: 'roboto_condensedlight',sans-serif
+		font-size: 15px
+		font-weight: normal
+		color: #b2b2b2 
+	.submit
+		padding: 0 0 0 12px
+		height: 31px
+		background: transparent
+		font-family: 'roboto_condensedlight',sans-serif
+		font-size: 15px
+		font-weight: normal
+		color: #4171a5
+		line-height: 31px
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		
+// main
+
+.main
+	@extend %in2
+	padding-bottom: 0
+	+clr
+.main__index
+	padding-bottom: 268px 
+
+.main__title
+	padding: 25px 0 37px
+	text-align: center
+	font-size: 36px
+	font-family: 'roboto_condensedbold',sans-serif
+	font-weight: normal
+	text-transform: uppercase
+	span
+		position: relative
+		padding: 0 30px 
+		&:after
+			content: ""
+			position: absolute
+			top: 45%
+			right: 0
+			margin-right: -100%
+			width: 100%
+			height: 2px
+			background: url("../img/titlesepright.png") 0 0 no-repeat
+		&:before
+			content: ""
+			position: absolute
+			top: 45%
+			left: 0
+			margin-left: -100%
+			width: 100%
+			height: 2px
+			background: url("../img/titlesepleft.png") 100% 0 no-repeat
+
+// banner
+.banner__wrapper
+	position: relative
+	padding: 0 0 32px
+.banner
+	overflow: hidden
+	height: 430px
+.banner__inner
+	position: relative
+	width: 1080px
+	height: 430px
+	img
+		width: 100%
+		height: 430px
+.banner__text
+	position: absolute
+	top: 27px
+	left: 31px 
+	color: #FFF
+	z-index: 2
+	.title
+		padding: 0 0 10px
+		font-family: 'roboto_condensedbold',sans-serif
+		font-size: 40px
+		font-weight: normal
+		text-transform: uppercase
+	.text
+		padding: 0 0 13px
+		font-family: 'roboto_condensedlight',sans-serif
+		font-size: 33px
+		font-weight: normal
+		text-transform: uppercase
+		
+	.smalltext
+		padding: 15px 0 0
+		background: url(../img/bannertextsep.png) 0 0 no-repeat 
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+		line-height: 16px
+.banner__overlay
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 432px
+	background: url(../img/banneroverlay.png) 0 0 no-repeat 
+	z-index: 1
+.banner__paging
+	position: relative
+	z-index: 1
+	margin-top: -11px 
+	+clr
+	.banner__paging__i
+		width: 360px
+		float: left
+		text-align: center
+		font-family: 'roboto_condensedbold',sans-serif
+		font-weight: normal
+		font-size: 24px
+		text-transform: uppercase
+		color: #FFF
+		background: url(../img/bannernavsep.png) 100% 100% no-repeat 
+		a
+			height: 138px
+			display: block
+			background: url(../img/bannernav.png) 0 100% no-repeat
+			color: #aeadad
+			text-decoration: none
+			line-height: 146px		
+		.cur
+			background: url(../img/bannernavactive.png) 0 100% no-repeat
+			color: #bda5b7
+			
+// services
+
+.services
+	background: url(../img/servsep.png) 50% 100% no-repeat 
+	h2
+		padding: 0 0 31px
+		font-family: 'roboto_condensedbold',sans-serif
+		font-size: 36px
+		font-weight: normal
+		text-align: center
+		text-transform: uppercase
+		span
+			position: relative
+			padding: 0 30px 
+			&:after
+				content: ""
+				position: absolute
+				top: 45%
+				right: 0
+				margin-right: -100%
+				width: 100%
+				height: 2px
+				background: url("../img/titlesepright.png") 0 0 no-repeat
+			&:before
+				content: ""
+				position: absolute
+				top: 45%
+				left: 0
+				margin-left: -100%
+				width: 100%
+				height: 2px
+				background: url("../img/titlesepleft.png") 100% 0 no-repeat
+	.services__list
+		position: relative
+		left: -10px
+		overflow: hidden
+	ul
+		margin-left: -10px
+		padding-bottom: 47px 
+		+clr
+	li
+		margin-left: 10px 
+		width: 102px
+		float: left
+		a
+			display: block
+			text-align: center
+			font-size: 15px
+			line-height: 16px 
+			color: #353232 
+		i
+			padding: 0 0 15px
+			display: inline-block
+			vertical-align: middle
+		span
+			display: block
+	.promosticker
+		i
+			+s(promosticker)
+		&:hover
+			i
+				+s(promostickerglow)
+	.alcosticker
+		padding-top: 6px
+		i
+			padding-bottom: 20px 
+			+s(alcosticker)
+		&:hover
+			i
+				+s(alcostickerglow)
+	.beersticker
+		i
+			+s(beersticker)
+		&:hover
+			i
+				+s(beerstickerglow)
+	.cosmsticker
+		padding-top: 6px
+		i
+			padding-bottom: 20px
+			+s(cosmsticker)
+		&:hover
+			i
+				+s(cosmstickerglow)
+	.foodsticker
+		i
+			+s(foodsticker)
+		&:hover
+			i
+				+s(foodstickerglow)
+	.cleansticker
+		padding-top: 6px
+		i
+			padding-bottom: 20px
+			+s(cleansticker)
+		&:hover
+			i
+				+s(cleanstickerglow)
+	.digitalsticker
+		i
+			+s(digitalsticker)
+		&:hover
+			i
+				+s(digitalstickerglow)
+
+// work slider
+.work__slider__wrap
+	position: relative
+	height: 580px
+	padding-bottom: 50px
+.work__slider
+	margin: 100px 0 0
+	height: 600px
+	.work
+		position: relative
+		z-index: 2
+		width: 780px
+		+clr
+	.work__img
+		float: left
+		width: 365px
+		height: 501px
+		img
+			display: block
+	.work__text
+		position: relative
+		z-index: 3
+		float: right
+		width: 384px
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+		a
+			line-height: 17px
+		p
+			padding: 0 0 30px
+			color: #8F8F8F 
+			line-height: 17px
+			
+.work__slider__pagination
+	position: absolute
+	top: 20px
+	left: 0
+	right: 0
+	z-index: 2
+	a
+		position: relative
+		font-family: 'roboto_condensedbold',sans-serif
+		font-size: 18px
+		font-weight: normal
+		color: #353232
+		text-transform: uppercase
+		text-decoration: none
+		line-height: 18px
+		cursor: pointer
+	i
+		position: absolute
+		top: 0
+		display: block
+	.next
+		margin: 2px 18px 0 0 
+		padding: 0 4px 0 0
+		float: right
+		text-align: right
+		
+		i
+			right: -16px
+			+s(wspn)
+	.prev
+		margin: 3px 0 0 14px
+		padding: 0 0 0 4px
+		float: left
+		text-align: left
+		line-height: 17px 
+		i
+			left: -16px
+			+s(wspp)
+.thumbNav
+	display: none
+.work__slider__wrap 
+	.work__all
+		position: absolute
+		z-index: 2 
+		top: 290px
+		left: 380px 
+		padding: 0 4px 0 0
+		text-align: right
+		font-size: 18px
+		font-weight: normal
+		text-transform: uppercase
+		text-decoration: none 
+		color: #353232 
+		line-height: 14px
+		i
+			position: absolute
+			top: 0
+			right: -16px
+			display: block
+			+s(wspn)
+
+.order__form
+	margin: 5px 0 0 
+	padding: 20px 34px 66px
+	width: 266px - (34*2)
+	background-color: #F0F0F0
+	-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.07) 
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.07) 
+	.title
+		padding: 0 0 34px
+		font-family: 'roboto_condensedbold',sans-serif
+		font-size: 18px
+		font-weight: normal
+		text-transform: uppercase
+		text-align: center
+.order__form__input
+	padding: 0 0 14px
+	overflow: hidden
+	label
+		display: block
+		padding: 0 0 5px
+		span
+			font-size: 10px
+	input,
+	select
+		margin: 0 0 8px
+		border: 1px solid #dbdbdb
+		padding: 0 10px
+		width: 176px 
+		height: 21px
+		display: block
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+		line-height: 21px
+		color: #737373
+	.smalltext
+		font-family: 'roboto_condensedlight_italic',sans-serif
+		font-size: 11px
+		font-style: italic
+		color: #8F8F8F
+	select 
+		padding: 0 0
+		width: 198px
+.inputname
+	padding: 0 0 5px
+	label,
+	input
+		float: left
+		display: block
+	input
+		border: 1px solid #dbdbdb
+		padding: 0 10px
+		width: 156px - (10*2) 
+	label
+		padding: 8px 10px 0 0
+		span
+			font-size: 10px
+.inputcontact
+	padding: 0 0 14px
+	label
+		padding: 0 0 8px
+.selectprod
+	padding: 0 0 8px
+	label
+		padding: 0 0 8px
+.order__form__full
+	display: block
+	padding: 0 0 14px
+.order__form__submit
+	padding: 0 0 0 20px
+	display: block
+	+s(inputsubmit)
+	font-family: 'roboto_condensedbold',sans-serif
+	font-size: 18px
+	font-weight: normal
+	color: #FFF
+	line-height: 20px
+	text-transform: uppercase
+	text-align: left
+.order__form__full,
+.order__form__submit
+	position: relative
+	z-index: 2
+
+
+// sidenav
+
+.side__nav
+	padding: 0 0 38px
+	li
+		padding: 0 46px 13px 31px
+		
+		a
+			display: block
+			line-height: 23px
+			color: #353232	
+	.sidenavitem__active
+		margin-left: -68px 
+		position: relative
+		background: url(../img/sidenav-item.png) 100% 0 no-repeat
+		// &:before
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0 
+		// 	width: 68px
+		// 	content: ""
+		// 	line-height: 23px 
+		// 	background: #520e3c 
+		a
+			padding-left: 69px 
+			background: #520e3c 
+			color: #FFF 
+			text-decoration: none
+
+// content__item
+.l
+	.content
+		width: 810px
+		+clr
+
+.content__item
+	margin: 0 0 0 80px
+	width: 190px
+	height: 330px
+	float: left
+	.img
+		margin: 0 21px 0 0
+	.text
+		position: relative
+		top: -26px
+		left: 8px
+		text-align: right
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+		color: #8f8f8f 
+		line-height: 17px
+		p
+			padding: 8px 0 0
+	
+.main__portfolio
+	background: white url("../img/servsep.png") 50% 100% no-repeat 
+
+
+// footer
+
+.footer
+	position: relative
+	@extend %in2
+	// height: 300px
+	z-index: 1
+	+clr
+// reasons
+.reasonsindex
+	position: absolute
+	top: -860px
+	left: 0
+	right: 0
+	padding: 0 34px 0
+	height: 860px 
+	background: url(../img/footertop.png) 0 0 no-repeat 
+.reasons
+	+clr 
+.reasons__right
+	padding: 0 0 0
+	width: 610px
+	float: right
+	+clr
+	.title
+		position: relative
+		margin: 0 0 0 267px
+		padding: 0 0 23px 60px
+		font-family: 'roboto_condensedlight',sans-serif
+		font-size: 36px
+		font-weight: normal
+		text-transform: uppercase
+		span
+			position: absolute
+			top: 0
+			left: 0
+			font-family: 'roboto_condensedbold',sans-serif
+			font-weight: normal
+			font-size: 114px
+			line-height: 92px
+		i
+			font-family: 'roboto_condensedbold',sans-serif
+			font-weight: normal
+			font-size: 60px
+			font-style: normal
+.reasons__list
+	margin: 0 0 0 42px 
+	li
+		position: relative
+		padding: 0 0 18px
+		h3
+			padding: 0 0 10px 
+			font-family: 'roboto_condensedbold',sans-serif
+			font-size: 15px
+			font-weight: normal
+			text-transform: uppercase
+		.text
+			padding: 0 0 6px 
+			color: #8f8f8f 
+			line-height: 17px 
+		i
+			position: absolute
+			top: 0
+			left: -42px
+			display: block
+		
+	.unique
+		i
+			+s(unique)
+	.goodprice
+		i
+			+s(goodprice)
+	.gooddigital
+		i
+			+s(gooddigital)
+	.personalservice
+		i
+			+s(personalservice)
+	.anyvolumes
+		i
+			+s(anyvolumes)
+.reasons__left
+	position: relative
+	padding: 0 38px 0 7px
+	width: 388px 
+	float: left
+	&:before
+		position: absolute
+		top: 470px - 66px
+		right: 0
+		content: ""
+		width: 1px
+		height: 430px  
+		background: #353232 
+	
+.reasonsindex
+	.reasons__right
+		padding-top: 240px
+	.reasons__left
+		padding-top: 462px
+
+.reasons__portfolio
+	padding: 30px 0 24px
+	.title
+		float: left
+		position: relative
+		margin: 0 0 0 -7px
+		padding: 0 0 23px 60px
+		font-family: 'roboto_condensedlight',sans-serif
+		font-size: 36px
+		font-weight: normal
+		text-transform: uppercase
+		span
+			position: absolute
+			top: 0
+			left: 0
+			font-family: 'roboto_condensedbold',sans-serif
+			font-weight: normal
+			font-size: 114px
+			line-height: 92px
+		i
+			font-family: 'roboto_condensedbold',sans-serif
+			font-weight: normal
+			font-size: 60px
+			font-style: normal
+	.reasons__list__wrap
+		width: 642px
+		float: right
+	.reasons__list
+		margin: 0
+		padding: 8px 0 0
+		width: 320px
+		float: left
+		li
+			padding: 0 40px 12px 0
+		.unique
+			padding-bottom: 29px
+		.goodprice
+			padding-bottom: 21px
+.footer__body
+	border-top: 1px solid #343131
+	padding: 38px 0 32px
+	+clr
+	.footer__links
+		width: 630px
+		float: left
+	.footer__nav
+		margin: 0
+		padding: 0 0 18px
+		text-align: left
+		+clr
+		li
+			margin: 0 10px 0 0
+			float: left
+	.madeby
+		text-align: left
+	.footer__contacts
+		width: 400px
+		float: right
+		.copyright
+			padding: 0 
+		
+
+
+.footer__nav
+	margin: 0 0 0 280px
+	padding: 0 0 34px
+	text-align: right
+	li
+		padding: 0 0 1px
+	a
+		color: #353232
+		line-height: 17px
+.copyright
+	padding: 0 0 53px
+	text-align: right
+	line-height: 18px 
+.madeby
+	text-align: right
+	a
+		color: #3F494E 
+		i
+			margin-left: 10px
+			padding: 0 0 5px
+			display: inline-block
+			vertical-align: top
+			+s(matador)
+
+	
+
+
+.footer__bottom
+	margin: 0 -34px 0
+	padding: 85px 133px + 34px 70px
+	background: url(../img/footer.jpg) 0 0 repeat-y
+	color: #FFF
+	+clr
+	h3
+		padding: 0 0 30px
+		font-family: 'roboto_condensedbold',sans-serif
+		font-size: 25px 
+		font-weight: normal
+		text-transform: uppercase
+		color: #FFF
+	.footer__phone,
+	.footer__email,
+	.footer__order
+		float: left
+		font-family: 'roboto_condensedlight',sans-serif
+		font-weight: normal
+		font-size: 18px
+		line-height: 21px 
+		text-transform: uppercase
+		vertical-align: top
+		a
+			color: #FFF
+		.title
+			font-size: 19px
+			padding: 0 0 9px
+		p
+			font-size: 21px
+			padding: 0 0 9px 1px
+	.footer__phone
+		width: 275px
+	.footer__email
+		width: 285px  
+	.footer__order
+		width: 247px
+		.title
+			font-size: 18px
+	.button
+		text-decoration: none
+	
+	
+.onlinehelp
+	position: fixed
+	top: 50%
+	left: 0
+	margin-top: -226px / 2 
+	+s(onlinehelp)
+	z-index: 10
+	a
+		display: block
+		text-indent: -9999px
+.backtotop
+	position: fixed
+	top: 50%
+	right: 10px 
+	margin-top: -42px / 2 
+	+s(backtotop)
+	text-indent: -9999px
+	z-index: 10
+	cursor: pointer
+	
+.lteie8
+	.button
+		font-size: 18px
+	
